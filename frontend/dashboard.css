@@ -1,0 +1,88 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#0f172a;
+  min-height:100vh;
+  padding:20px;
+  color:white;
+}
+
+.dashboard-container{
+  max-width:500px;
+  margin:auto;
+}
+
+.top-section{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.top-section h1{
+  margin-bottom:15px;
+}
+
+.goal-text{
+  color:#cbd5e1;
+  margin-bottom:8px;
+}
+
+#showGoal{
+  color:#22c55e;
+  font-size:32px;
+}
+
+.card{
+  background:rgba(255,255,255,0.08);
+  padding:20px;
+  border-radius:18px;
+  margin-bottom:18px;
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#22c55e;
+}
+
+.card p{
+  color:#e2e8f0;
+  line-height:1.5;
+}
+
+.money-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:16px;
+  background:#22c55e;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.progress-bar{
+  width:100%;
+  height:22px;
+  background:rgba(255,255,255,0.1);
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:15px;
+}
+
+.progress-fill{
+  height:100%;
+  width:0%;
+  background:#22c55e;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+#progressText{
+  margin-top:12px;
+  font-size:15px;
+}
