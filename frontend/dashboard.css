@@ -86,3 +86,17 @@ body{
   margin-top:12px;
   font-size:15px;
 }
+
+#historyList{
+  list-style:none;
+  margin-top:15px;
+}
+
+#historyList li{
+  background:rgba(255,255,255,0.06);
+  padding:12px;
+  border-radius:12px;
+  margin-bottom:10px;
+  color:#22c55e;
+  font-weight:bold;
+}

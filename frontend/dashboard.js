@@ -20,6 +20,11 @@ localStorage.getItem("savedMoney") || 0;
 document.getElementById("savedMoney").innerHTML =
 "₹" + currentMoney;
 
+let historyData =
+JSON.parse(localStorage.getItem("historyData")) || [];
+
+showHistory();
+
 function addMoney(){
 
     let inputMoney =
@@ -29,6 +34,15 @@ function addMoney(){
     Number(currentMoney) + Number(inputMoney);
 
     localStorage.setItem("savedMoney", currentMoney);
+
+    historyData.push("+ ₹" + inputMoney);
+
+localStorage.setItem(
+"historyData",
+JSON.stringify(historyData)
+);
+
+showHistory();
 
     document.getElementById("savedMoney").innerHTML =
     "₹" + currentMoney;
@@ -61,4 +75,20 @@ function updateProgress(){
     document.getElementById("progressText")
     .innerHTML =
     Math.floor(progress) + "% Completed";
+}
+
+function showHistory(){
+
+    let historyList =
+    document.getElementById("historyList");
+
+    historyList.innerHTML = "";
+
+    historyData.slice().reverse().forEach(function(item){
+
+        historyList.innerHTML +=
+        `<li>${item}</li>`;
+
+    });
+
 }
