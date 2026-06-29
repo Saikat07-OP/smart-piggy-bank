@@ -1,3 +1,20 @@
+console.log("JS Connected 😎");
+
+fetch("http://localhost:3000/goal")
+.then(response => response.json())
+.then(data => {
+
+    console.log("Backend Data 😎");
+    console.log(data);
+
+})
+.catch(error => {
+
+    console.log("Fetch Error ❌");
+    console.log(error);
+
+});
+
 let goalName = localStorage.getItem("goalName");
 let goalAmount = localStorage.getItem("goalAmount");
 let goalDate = localStorage.getItem("goalDate");
