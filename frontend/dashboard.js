@@ -62,6 +62,13 @@ function updateProgress(){
     let savedAmount =
     Number(currentMoney);
 
+    let remaining =
+    targetAmount - savedAmount;
+
+    if(remaining < 0){
+        remaining = 0;
+    }
+
     let progress =
     (savedAmount / targetAmount) * 100;
 
@@ -75,6 +82,10 @@ function updateProgress(){
     document.getElementById("progressText")
     .innerHTML =
     Math.floor(progress) + "% Completed";
+
+    document.getElementById("remainingAmount")
+    .innerHTML =
+    "₹" + remaining;
 }
 
 function showHistory(){
